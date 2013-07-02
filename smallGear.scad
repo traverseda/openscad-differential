@@ -1,10 +1,7 @@
 use<MCAD/involute_gears.scad>;
+include<settings.scad>;
 
 
-	gear1_teeth = 27;
-	gear2_teeth = 8;
-	axis_angle = 90;
-	outside_circular_pitch=280;
 
 	outside_pitch_radius1 = gear1_teeth * outside_circular_pitch / 360;
 	outside_pitch_radius2 = gear2_teeth * outside_circular_pitch / 360;
@@ -18,10 +15,6 @@ use<MCAD/involute_gears.scad>;
 	echo ("pitch_angle1, pitch_angle2", pitch_angle1, pitch_angle2);
 	echo ("pitch_angle1 + pitch_angle2", pitch_angle1 + pitch_angle2);
 
-	rotate([0,0,0])
-	translate ([0,0,0])
-	{
-		translate([0,0,-pitch_apex1])
 		bevel_gear (
 			number_of_teeth=gear2_teeth,
 			cone_distance=cone_distance,
@@ -31,4 +24,4 @@ use<MCAD/involute_gears.scad>;
 			gear_thickness=0,
 			bore_diameter=4.5
 			);
-	}
+

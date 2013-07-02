@@ -1,10 +1,7 @@
 use<MCAD/involute_gears.scad>;
+include<settings.scad>;
 
 
-	gear1_teeth = 27;
-	gear2_teeth = 8;
-	axis_angle = 90;
-	outside_circular_pitch=280;
 
 	outside_pitch_radius1 = gear1_teeth * outside_circular_pitch / 360;
 	outside_pitch_radius2 = gear2_teeth * outside_circular_pitch / 360;
