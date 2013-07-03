@@ -7,8 +7,8 @@ difference(){
 	union(){
 
 	//this for loop is a tan fillet
-	for(i=[1:10]){
-		translate([0,0,i+5])cylinder(h=1,r1=tan(i*7)+3.5,r2=tan((i+1)*7)+3.5);
+	for(i=[1:20]){
+		translate([0,0,i+5])cylinder(h=1,r1=tan(i*7)+3.5,r2=tan((i+1)*7)+3.5,$fn=30);
 		}
 	translate([0,0,-20])cylinder(	h=40, r=3.8);
 	translate([0,0,-30])linear_extrude(height=10)ngon(6,4);
